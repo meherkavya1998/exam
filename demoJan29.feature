@@ -1,16 +1,25 @@
 
 Feature: Pixel store Pos
  Background:
- Given Sales executive logged into the machine
+ Given Team executive login
+ @Login
+ Scenario: Login functionality
+ Given User navigated to login page
+ When user enters username and password
+ Then user logged in successfully
 
-@RegressionTest
-  Scenario: Executive signup
-    Given executive is at the signup registration
-    When executive provides "admin" and "admin"
-    Then signup successful
-   @Smoke @RegressionTest
-  Scenario: shopping cart
-    Given executive added the items to cart
+@RegressionTest1
+  Scenario: Registration for Testme App
+    Given Team is at signup for testmeApp
+   When Team provides username
+    And if username is available
+    Then Team provides firstname,lastname,password,confirmpassword
+    And Team continues to provide gender,email,mobileno,dob,address,secque,answer
+    Then registration is successful
+    
+   @RegressionTest
+  Scenario: Login
+    Given Team executive provides username and password
     When items price is calculated
     Then bill is generated with final amount
  @FunctionalTest
@@ -22,12 +31,10 @@ Feature: Pixel store Pos
     Examples: 
       | user    | password | 
       | Lalitha |password123 | 
-      | John    |Ravi1234 | 
+     
  @datadriven
-  Scenario: Search a product
-  When Larry searches for products in the search field
-     |Head|
-     |Hand|
-     |Lap|
-     Then Larry verifies the product available
+  Scenario: Search for product
+  Given Team has registered in the Testme App
+ When Team search
+    Then Larry verifies the product available
   

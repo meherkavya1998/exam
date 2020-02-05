@@ -11,73 +11,58 @@
         "steps": [
           {
             "result": {
-              "duration": 45899280200,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 4,
-            "name": "Sales executive logged into the machine",
-            "match": {
-              "location": "StepDef.sales_executive_logged_into_the_machine()"
-            },
+            "name": "Team executive login",
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2020-01-30T04:49:13.678Z",
-        "line": 27,
-        "name": "Search a product",
+        "start_timestamp": "2020-02-05T08:29:26.140Z",
+        "line": 6,
+        "name": "Login functionality",
         "description": "",
-        "id": "pixel-store-pos;search-a-product",
+        "id": "pixel-store-pos;login-functionality",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 422792200,
-              "status": "passed"
+              "duration": 140600,
+              "status": "skipped"
             },
-            "line": 28,
-            "name": "Larry searches for products in the search field",
+            "line": 7,
+            "name": "User navigated to login page",
             "match": {
-              "location": "StepDef.larry_searches_for_products_in_the_search_field(DataTable)"
+              "location": "Testme.user_navigated_to_login_page()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Head"
-                ]
-              },
-              {
-                "cells": [
-                  "Hand"
-                ]
-              },
-              {
-                "cells": [
-                  "Lap"
-                ]
-              }
-            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters username and password",
+            "match": {},
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat demo.StepDef.larry_verifies_the_product_available(StepDef.java:42)\r\n\tat ✽.Larry verifies the product available(file:demoJan29.feature:32)\r\n",
-              "duration": 1577100,
-              "status": "pending"
+              "status": "undefined"
             },
-            "line": 32,
-            "name": "Larry verifies the product available",
-            "match": {
-              "location": "StepDef.larry_verifies_the_product_available()"
-            },
+            "line": 9,
+            "name": "user logged in successfully",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@datadriven"
+            "name": "@Login"
           }
         ]
       }

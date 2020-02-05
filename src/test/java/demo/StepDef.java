@@ -10,12 +10,38 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.LoginPage;
 
 public class StepDef {
 	WebDriver driver;
 	
 
-@When("Larry searches for products in the search field")
+@Given("Team executive login")
+public void team_executive_login() {
+	driver=Drivers.getDriver("chrome");
+	driver.get("http://10.232.237.143:443/TestMeApp/fetchcat.htm");
+	LoginPage lp=new LoginPage(driver);
+	lp.signin.click();
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+@When("user enters username and password")
+public void user_enters_username_and_password() {
+	LoginPage.userName.sendKeys("lalitha");
+	LoginPage.Password.sendKeys("password123");
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+@Then("user logged in successfully")
+public void user_logged_in_successfully() {
+	driver.findElement(By .name("Login")).click();
+    // Write code here that turns the phrase above into concrete actions
+    //throw new cucumber.api.PendingException();
+}
+
+/*@When("Larry searches for products in the search field")
 public void larry_searches_for_products_in_the_search_field(io.cucumber.datatable.DataTable dataTable) {
     // Write code here that turns the phrase above into concrete actions
     // For automatic transformation, change DataTable to one of
@@ -117,6 +143,6 @@ public void larry_verifies_the_product_available() {
 	    //throw new cucumber.api.PendingException();
 	}
 
-	
+	*/
 
 }
