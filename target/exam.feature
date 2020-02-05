@@ -3,12 +3,24 @@ Feature: Testme App
 
   @Login
   Scenario Outline: Login functionality
-    Given User navigated to login page
-    When User enters username and password
-    Then User logged in successfully 
+    Given Admin navigated to login page
+    When Admin enters username and password
+    Then Admin logged in successfully 
    
     Examples:
    
       | username  | password    |
-      | Lalitha   | password123 | 
+      | admin   | Password456 | 
     
+  @Sports
+  Scenario Outline: Adding Sports category
+  Given admin adds  category
+  When  admin is able to add category
+  Then admin adds subcategory
+  
+  Examples:
+  
+  |category| subcategory|
+  | Sports | Basketball |
+  |        | Volleyball |
+  

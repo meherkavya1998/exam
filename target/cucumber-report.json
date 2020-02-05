@@ -21,7 +21,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-02-05T08:29:26.140Z",
+        "start_timestamp": "2020-02-05T09:34:13.389Z",
         "line": 6,
         "name": "Login functionality",
         "description": "",
@@ -31,7 +31,7 @@
         "steps": [
           {
             "result": {
-              "duration": 140600,
+              "duration": 48500,
               "status": "skipped"
             },
             "line": 7,
